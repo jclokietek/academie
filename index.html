@@ -25,6 +25,7 @@
 <meta name="theme-color" content="#161b22">
 <script>
 /* Page relais : le visiteur part tout de suite vers la démo. */
+try{ if(!localStorage.getItem('jcl_moi')) navigator.sendBeacon('https://jcl-visites.thetof.workers.dev/c', new Blob([JSON.stringify({s:'relais-academie',k:'v',p:location.pathname,r:document.referrer||'',w:screen.width,b:navigator.webdriver?1:0})],{type:'text/plain'})); }catch(e){}
 location.replace('https://academie-demo.thetof.workers.dev/');
 </script>
 <style>
